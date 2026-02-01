@@ -22,7 +22,7 @@ const Navbar = () => {
   return (
     <header className="w-full sticky top-0 z-50">
       <div className="flex justify-center pt-6">
-        <nav className="w-[92%] max-w-7xl bg-white/90 backdrop-blur rounded-full shadow-lg px-8 py-4 flex items-center justify-between transition-all duration-300">
+        <nav className="w-[92%] max-w-4xl bg-white/90 backdrop-blur rounded-full shadow-lg px-8 py-4 flex items-center justify-between transition-all duration-300">
 
           {/* LOGO */}
           <Link to="/" className="flex items-center gap-3">
