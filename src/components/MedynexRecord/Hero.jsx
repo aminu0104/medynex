@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
@@ -6,7 +7,12 @@ const Hero = () => {
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 items-center gap-12">
         
         {/* LEFT CONTENT */}
-        <div>
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.8 }}
+        >
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
             Smart Hospital Management <br />
             <span className="text-blue-600">Powered by Medynex Record</span>
@@ -27,16 +33,22 @@ const Hero = () => {
               Learn More
             </button>
           </div>
-        </div>
+        </motion.div>
 
         {/* RIGHT IMAGE */}
-        <div className="flex justify-center">
+        <motion.div
+          className="flex justify-center"
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+        >
           <img
             src="/images/medynex-record-mockup.png"
             alt="Medynex Record Dashboard Mockup"
             className="w-full max-w-lg"
           />
-        </div>
+        </motion.div>
 
       </div>
     </section>

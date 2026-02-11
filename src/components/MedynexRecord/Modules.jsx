@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const modules = [
   {
@@ -56,11 +57,27 @@ const Modules = () => {
         </p>
 
         {/* Grid */}
-        <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <motion.div
+          className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-4"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }} // <-- triggers on scroll
+          variants={{
+            visible: {
+              transition: {
+                staggerChildren: 0.15,
+              },
+            },
+          }}
+        >
           {modules.map((module, index) => (
-            <div
+            <motion.div
               key={index}
               className="border border-gray-200 rounded-xl p-6 text-left hover:shadow-xl hover:-translate-y-2 transition duration-300"
+              variants={{
+                hidden: { opacity: 0, y: 30 },
+                visible: { opacity: 1, y: 0 },
+              }}
             >
               {/* Icon placeholder */}
               <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
@@ -74,9 +91,9 @@ const Modules = () => {
               <p className="mt-3 text-gray-600 text-sm leading-relaxed">
                 {module.desc}
               </p>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
       </div>
     </section>

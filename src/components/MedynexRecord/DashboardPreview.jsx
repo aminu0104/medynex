@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const DashboardPreview = () => {
   return (
@@ -6,7 +7,12 @@ const DashboardPreview = () => {
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 items-center gap-16">
 
         {/* LEFT CONTENT */}
-        <div>
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.8 }}
+        >
           <span className="text-blue-600 font-semibold text-sm uppercase tracking-wide">
             Platform Overview
           </span>
@@ -43,16 +49,21 @@ const DashboardPreview = () => {
               </p>
             </li>
           </ul>
-        </div>
+        </motion.div>
 
         {/* RIGHT IMAGE */}
-        <div>
+        <motion.div
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+        >
           <img
             src="/images/dashboard-preview.png"
             alt="Medynex Record Dashboard"
             className="rounded-2xl shadow-2xl"
           />
-        </div>
+        </motion.div>
 
       </div>
     </section>
