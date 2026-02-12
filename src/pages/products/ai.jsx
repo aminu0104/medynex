@@ -1,10 +1,21 @@
-const AiAssistant = () => {
-  return (
-    <div className="p-8">
-      <h1 className="text-3xl font-bold">AI Assistant</h1>
-      <p className="mt-4">Intelligent AI-powered healthcare assistant.</p>
-    </div>
-  );
-};
+import Hero from "../../components/MedynexAI/Hero";
+import WhatIsAI from "../../components/MedynexAI/WhatIsAI";
+import CoreCapabilities from "../../components/MedynexAI/CoreCapabilities";
+import AIInAction from "../../components/MedynexAI/AIInAction";
+import FinalCTA from "../../components/MedynexAI/FinalCTA";
 
-export default AiAssistant;
+import React from 'react'
+
+const ai = () => {
+  return (
+    <div>
+      <Hero />
+      <WhatIsAI />
+      <CoreCapabilities />
+      <AIInAction />
+      <FinalCTA />
+    </div>
+  )
+}
+
+export default ai
