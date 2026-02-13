@@ -1,4 +1,7 @@
 import { motion } from "framer-motion";
+import doctor1 from "../../assets/testimonials/doctor-1.jpg";
+import doctor2 from "../../assets/testimonials/doctor-2.jpg";
+import patient1 from "../../assets/testimonials/patient-1.jpg";
 
 const testimonials = [
   {
@@ -6,21 +9,21 @@ const testimonials = [
     role: "General Practitioner",
     message:
       "Medynex has completely changed how I consult with patients. It’s fast, secure, and incredibly easy to use.",
-    avatar: "/doctor-1.jpg",
+    avatar: doctor1,
   },
   {
     name: "Ahmed Musa",
     role: "Patient",
     message:
       "I was able to speak with a doctor from my home and access my records anytime. Medynex makes healthcare stress-free.",
-    avatar: "/patient-1.jpg",
+    avatar:   doctor2,
   },
   {
     name: "Sarah Johnson",
     role: "Health Administrator",
     message:
       "Managing patient data and consultations in one platform has improved efficiency across our organization.",
-    avatar: "/doctor-2.jpg",
+    avatar: patient1 ,
   },
 ];
 
@@ -52,7 +55,7 @@ const Testimonials = () => {
           className="text-center max-w-2xl mx-auto mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900">
-            What People Say About Medynex
+            What People Say <span className=" text-blue-600"> About Medynex</span>
           </h2>
           <p className="mt-4 text-slate-600">
             Trusted by healthcare professionals and patients alike.

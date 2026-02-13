@@ -52,7 +52,7 @@ const HowItWorks = () => {
           className="text-center max-w-2xl mx-auto mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900">
-            How Medynex Works
+            How Medynex <span className=" text-blue-600"> Works</span>
           </h2>
           <p className="mt-4 text-slate-600">
             A simple, secure, and modern way to access healthcare from anywhere.
