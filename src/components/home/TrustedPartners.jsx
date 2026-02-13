@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-// Import logos (Make sure paths are correct)
+
 import healthplus from "../../assets/partners/healthplus.png";
 import carelink from "../../assets/partners/carelink.png";
 import medicore from "../../assets/partners/medicore.png";
@@ -60,7 +60,7 @@ const TrustedPartners = () => {
               <img
                 src={partner.logo}
                 alt={partner.name}
-                className="h-8 w-auto object-contain grayscale hover:grayscale-0 transition duration-300"
+                className="h-8 w-50 object-contain grayscale hover:grayscale-0 transition duration-300"
               />
               <span className="text-slate-600 font-medium text-sm">
                 {partner.name}
