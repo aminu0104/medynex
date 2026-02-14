@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import emailjs from "@emailjs/browser";
+import { send } from "@emailjs/browser";
 
 const ContactForm = () => {
   const formRef = useRef();
@@ -17,8 +17,14 @@ const ContactForm = () => {
     setLoading(true);
     setStatus("");
 
-    emailjs
-      .sendForm(SERVICE_ID, TEMPLATE_ID, formRef.current, PUBLIC_KEY)
+    const templateParams = {
+      user_name: formRef.current.user_name.value,
+      user_email: formRef.current.user_email.value,
+      subject: formRef.current.subject.value,
+      message: formRef.current.message.value,
+    };
+
+    send(SERVICE_ID, TEMPLATE_ID, templateParams, PUBLIC_KEY)
       .then(
         () => {
           setStatus("Message sent successfully!");
