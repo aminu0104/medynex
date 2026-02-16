@@ -2,7 +2,7 @@ import DemoForm from "../components/BookDemo/DemoForm";
 
 const BookDemo = () => {
   return (
-    <section className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-100 pt-32 pb-20">
+    <section className="min-h-screenpt-32 pb-20">
       <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         
         {/* Left Content */}
@@ -17,10 +17,10 @@ const BookDemo = () => {
           </p>
 
           <ul className="mt-8 space-y-4 text-gray-700">
-            <li>✔️ Real-time virtual consultations</li>
-            <li>✔️ Secure medical records management</li>
-            <li>✔️ AI-assisted healthcare workflows</li>
-            <li>✔️ Built for clinics, hospitals & startups</li>
+            <li> -Real-time virtual consultations</li>
+            <li> -Secure medical records management</li>
+            <li> -AI-assisted healthcare workflows</li>
+            <li> -Built for clinics, hospitals & startups</li>
           </ul>
         </div>
 

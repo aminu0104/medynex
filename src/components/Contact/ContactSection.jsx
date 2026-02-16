@@ -30,7 +30,7 @@ const ContactSection = () => {
 
             <div>
               <p className="font-semibold">Phone Number</p>
-              <p className="text-blue-100">+234 000 000 0000</p>
+              <p className="text-blue-100">+234 7086591021</p>
             </div>
 
             <div>
