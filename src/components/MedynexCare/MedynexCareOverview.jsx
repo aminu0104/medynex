@@ -1,6 +1,7 @@
 // File: components/MedynexCare/MedynexCareOverview.jsx
 import React from "react";
 import { motion } from "framer-motion";
+import image from "../../assets/Record/What.jpg";
 
 const MedynexCareOverview = () => {
   return (
@@ -76,7 +77,7 @@ const MedynexCareOverview = () => {
           viewport={{ once: true }}
         >
           <img
-            src="" // <-- Add your image path here
+            src={image}
             alt="Medynex Care Consultation"
             className="w-full max-w-lg rounded-2xl shadow-xl"
           />

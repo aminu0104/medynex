@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import  hero from "../../assets/Care/Laptop.png";
 
 const DashboardPreview = () => {
   return (
@@ -59,7 +60,7 @@ const DashboardPreview = () => {
           transition={{ duration: 0.8, delay: 0.3 }}
         >
           <img
-            src="/images/dashboard-preview.png"
+            src={hero}
             alt="Medynex Record Dashboard"
             className="rounded-2xl shadow-2xl"
           />

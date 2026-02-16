@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const FinalCTA = () => {
   return (
@@ -27,16 +28,32 @@ const FinalCTA = () => {
         {/* CTA Buttons */}
         <div className="mt-10 flex flex-col sm:flex-row justify-center gap-6">
 
-          {/* Primary Button */}
-          <button className="bg-white text-blue-600 font-semibold px-8 py-4 rounded-xl hover:bg-gray-100 transition flex items-center justify-center gap-2">
-            Request a Demo
-            <ArrowRight size={18} />
-          </button>
+          <Link to="/book-demo">
+            <motion.button
+              whileHover={{
+                y: -3,
+                boxShadow: "0px 15px 40px rgba(0,0,0,0.25)",
+              }}
+              whileTap={{ scale: 0.96 }}
+              className="
+                bg-white text-blue-600
+                px-8 py-4
+                rounded-full
+                font-semibold
+                text-sm md:text-base
+                transition-all duration-300
+              "
+            >
+          Request Demo
+            </motion.button>
+          </Link>
 
-          {/* Secondary Button */}
-          <button className="border border-white text-white font-semibold px-8 py-4 rounded-xl hover:bg-white hover:text-blue-600 transition">
-            Contact Sales
-          </button>
+           
+      <Link
+      to="/contact"
+  className="border border-white text-white font-semibold px-8 py-4 rounded-xl hover:bg-white hover:text-blue-600 transition">
+    Contact Sales
+</Link>
 
         </div>
 

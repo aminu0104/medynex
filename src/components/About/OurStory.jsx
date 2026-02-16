@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import About from "../../assets/about-us.jpg";
 
 const OurStory = () => {
   return (
@@ -41,7 +42,7 @@ const OurStory = () => {
           className="flex justify-center"
         >
           <img
-            src="/about-who-we-are.jpg"
+            src={About}
             alt="About Medynex"
             className="w-full max-w-md rounded-2xl shadow-lg object-cover"
           />

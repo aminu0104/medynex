@@ -1,5 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
+import  hero from "../../assets/Ai/hero.png";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -37,32 +39,44 @@ const Hero = () => {
 
           {/* CTA Buttons */}
           <div className="mt-10 flex flex-col sm:flex-row gap-6">
+                  <Link
+  to="/book-demo"
+  className="bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold px-8 py-4 rounded-xl hover:opacity-90 transition">
+  
 
-            <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold px-8 py-4 rounded-xl hover:opacity-90 transition">
-              Request AI Demo
-            </button>
+  Request Demo
+</Link>
 
-            <button className="border border-gray-300 text-gray-700 font-semibold px-8 py-4 rounded-xl hover:bg-gray-100 transition">
-              Learn More
-            </button>
+
+         <Link
+  to="/book-demo"
+className="border border-gray-300 text-gray-700 font-semibold px-8 py-4 rounded-xl hover:bg-gray-100 transition">
+  
+Learn More
+</Link>
+
+            
 
           </div>
         </motion.div>
 
         {/* RIGHT IMAGE */}
-        <motion.div
-          initial={{ opacity: 0, x: 40 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.7 }}
-          viewport={{ once: true }}
-          className="flex justify-center"
-        >
-          <img
-            src=""
-            alt="Medynex AI Assistant Dashboard"
-            className="w-full max-w-xl rounded-2xl shadow-2xl"
-          />
-        </motion.div>
+  <motion.div
+  initial={{ opacity: 0, x: 40 }}
+  whileInView={{ opacity: 1, x: 0 }}
+  transition={{ duration: 0.7 }}
+  viewport={{ once: true }}
+  className="flex justify-center relative"
+>
+  {/* Soft Glow Behind Phone */}
+  <div className="absolute w-72 h-72 bg-gradient-to-r from-blue-400/20 to-purple-400/20 rounded-full blur-3xl -z-10"></div>
+
+  <img
+    src={hero}
+    alt="Medynex AI Assistant Dashboard"
+    className="w-full max-w-xl drop-shadow-[0_50px_80px_rgba(0,0,0,0.18)]"
+  />
+</motion.div>
 
       </div>
     </section>

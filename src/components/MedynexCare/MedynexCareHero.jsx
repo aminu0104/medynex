@@ -1,6 +1,9 @@
-// File: components/MedynexCare/MedynexCareHero.jsx
+
 import React from "react";
 import { motion } from "framer-motion";
+import Phone from "../../assets/Record/Phone.png";
+import Apple from "../../assets/Record/Apple.png";
+import Play from "../../assets/Record/Play.png";
 
 const MedynexCareHero = () => {
   return (
@@ -24,13 +27,13 @@ const MedynexCareHero = () => {
           {/* Store Buttons */}
           <div className="flex gap-4 mt-6">
             <motion.img
-              src="" // <-- Add Play Store badge image path
+              src={Play}
               alt="Download on Play Store"
               className="w-32 h-auto cursor-pointer"
               whileHover={{ scale: 1.05 }}
             />
             <motion.img
-              src="" // <-- Add App Store badge image path
+              src={Apple}
               alt="Download on App Store"
               className="w-32 h-auto cursor-pointer"
               whileHover={{ scale: 1.05 }}
@@ -38,20 +41,25 @@ const MedynexCareHero = () => {
           </div>
         </motion.div>
 
-        {/* Right Column - Mobile Mockup */}
-        <motion.div
-          className="w-full md:w-1/2 flex justify-center relative z-10"
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          <img
-            src="" // <-- Add your mobile mockup image path here
-            alt="Medynex Care Mobile App"
-            className="w-64 md:w-96 h-auto drop-shadow-2xl rounded-xl"
-          />
-        </motion.div>
-
+    {/* Right Column - Mobile Mockup */}
+<motion.div
+  className="w-full md:w-1/2 flex justify-center md:justify-end relative z-10"
+  initial={{ opacity: 0, x: 80 }}
+  animate={{ opacity: 1, x: 0 }}
+  transition={{ duration: 1 }}
+>
+  <motion.img
+    src={Phone}
+    alt="Medynex Care Mobile App"
+    className="w-[420px] md:w-[550px] lg:w-[700px] xl:w-[800px] h-auto drop-shadow-[0_40px_80px_rgba(0,0,0,0.25)]"
+    animate={{ y: [0, -15, 0] }}
+    transition={{
+      duration: 4,
+      repeat: Infinity,
+      ease: "easeInOut",
+    }}
+  />
+</motion.div>
       </div>
 
       {/* Optional Floating Shapes for Style */}

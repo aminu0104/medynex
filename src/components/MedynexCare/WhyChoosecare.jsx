@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import image from "../../assets/Record/Mockup.png";
 
 const leftFeatures = [
   {
@@ -80,20 +81,24 @@ const WhyChooseMedynexCare = () => {
             ))}
           </div>
 
-          {/* Center image */}
+                     {/* Center image */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: 0, scale: 0.5 }}
+            whileInView={{ opacity: 1, scale: 1.5 }} // Forces the image to 150% size
+            transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
             viewport={{ once: true }}
-            className="flex justify-center"
+            className="flex justify-center relative z-20" 
           >
             <img
-              src="" 
+              src={image}
               alt="Medynex Care Mobile App"
-              className="max-w-[280px] md:max-w-[320px] drop-shadow-2xl"
+              // Removed 320px limit and replaced with a massive 700px ceiling
+              className="w-full max-w-[700px] h-auto drop-shadow-[0_60px_60px_rgba(0,0,0,0.4)]"
             />
           </motion.div>
+
+      
+
 
           {/* Right features */}
           <div className="space-y-10">

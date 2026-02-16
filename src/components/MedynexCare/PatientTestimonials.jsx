@@ -1,32 +1,39 @@
 import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
+import Doctor from "../../assets/Record/doctor-1.jpg";
+import Man from "../../assets/Record/The Man.jpg";
+import  Woman from "../../assets/Record/The Woman.jpg";
+
 
 import "swiper/css";
 import "swiper/css/pagination";
 
 const testimonials = [
   {
-    name: "Aisha Bello",
-    role: "Patient",
+    name: "Dr. Aisha Bello",
+    role: "General Practitioner",
     quote:
       "Medynex Care completely changed how I access healthcare. Booking a doctor is simple, fast, and stress-free.",
-    image: "",
+    image: Doctor,
   },
   {
     name: "David Okonkwo",
     role: "Remote Worker",
     quote:
       "I was able to consult a specialist late at night without leaving my home. The experience felt secure and professional.",
-    image: "",
+    image: Man,
   },
   {
     name: "Fatima Sule",
     role: "Caregiver",
     quote:
       "Managing my mother’s health has become easier. Medynex Care gives me peace of mind knowing help is always available.",
-    image: "",
+    image: Woman,
   },
+  
+
+  
 ];
 
 const PatientTestimonials = () => {
@@ -57,7 +64,7 @@ const PatientTestimonials = () => {
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.4 }}
           viewport={{ once: true }}
         >
           <Swiper

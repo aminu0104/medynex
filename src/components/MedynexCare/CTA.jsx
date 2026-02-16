@@ -1,4 +1,9 @@
 import { motion } from "framer-motion";
+import Apple from "../../assets/Record/Apple.png";
+import Play from "../../assets/Record/Play.png";
+
+
+
 
 const MedynexCareFinalCTA = () => {
   return (
@@ -26,12 +31,12 @@ const MedynexCareFinalCTA = () => {
             {/* Right CTA buttons */}
             <div className="flex flex-col sm:flex-row gap-6 lg:justify-end">
               <img
-                src=""
+                src={Apple}
                 alt="Download on the App Store"
                 className="h-14 w-auto cursor-pointer transition-transform hover:scale-105"
               />
               <img
-                src=""
+                src={Play}
                 alt="Get it on Google Play"
                 className="h-14 w-auto cursor-pointer transition-transform hover:scale-105"
               />

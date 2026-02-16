@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import  hero from "../../assets/Ai/Airtwo2.png";
 
 const WhatIsAI = () => {
   return (
@@ -15,9 +16,9 @@ const WhatIsAI = () => {
           className="flex justify-center"
         >
           <img
-            src=""
+            src={hero}
             alt="AI clinical support interface"
-            className="w-full max-w-xl rounded-2xl shadow-xl"
+            className="w-full max-w-xl rounded-2xl"
           />
         </motion.div>
 

@@ -1,9 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
+import  hero from "../../assets/Care/Macbook_Air_Mockup_3.png";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
-    <section className="bg-white py-20 px-6 md:px-16">
+      <section className="relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-blue-100 py-20 px-6 md:px-16">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 items-center gap-12">
         
         {/* LEFT CONTENT */}
@@ -25,30 +27,50 @@ const Hero = () => {
           </p>
 
           <div className="mt-8 flex flex-wrap gap-4">
-            <button className="bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition">
-              Request Demo
-            </button>
-
-            <button className="border border-gray-300 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition">
-              Learn More
-            </button>
+       <Link
+  to="/book-demo"
+  className="bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition inline-block"
+>
+  Request Demo
+</Link>
+         
+         <Link
+            to="/contact"
+  className="border border-gray-300 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition">
+ Learn More
+</Link>
+         
           </div>
         </motion.div>
 
-        {/* RIGHT IMAGE */}
-        <motion.div
-          className="flex justify-center"
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-        >
-          <img
-            src="/images/medynex-record-mockup.png"
-            alt="Medynex Record Dashboard Mockup"
-            className="w-full max-w-lg"
-          />
-        </motion.div>
+  <motion.div
+  className="flex justify-center relative"
+  initial={{ opacity: 0, x: 50 }}
+  whileInView={{ opacity: 1, x: 0 }}
+  viewport={{ once: true, amount: 0.2 }}
+  transition={{ duration: 0.8, delay: 0.3 }}
+>
+  {/* Background Glow */}
+  <div className="hidden lg:block absolute w-[500px] h-[500px] bg-blue-500/20 rounded-full blur-3xl -z-10"></div>
+
+<motion.img
+  src={hero}
+  alt="Medynex Record Dashboard Mockup"
+  className="w-[120%] md:w-[150%] lg:w-[150%] max-w-none drop-shadow-2xl"
+  style={{ transformStyle: "preserve-3d" }}
+  animate={{
+    y: [0, -20, 0],
+    rotateX: [0, 5, 0],
+    rotateY: [0, -5, 0],
+    rotate: [-2, 2, -2],
+  }}
+  transition={{
+    duration: 6,
+    repeat: Infinity,
+    ease: "easeInOut",
+  }}
+/>
+</motion.div>
 
       </div>
     </section>

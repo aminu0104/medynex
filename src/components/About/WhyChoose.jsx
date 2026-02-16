@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import Whychoose from "../../assets/Why choose us.jpg";
 
 const WhyChoose = () => {
   const reasons = [
@@ -59,7 +60,7 @@ const WhyChoose = () => {
           className="flex justify-center"
         >
           <img
-            src="/about/why-choose.png"
+            src={Whychoose}
             alt="Why choose Medynex"
             className="w-full max-w-md rounded-3xl shadow-lg"
           />

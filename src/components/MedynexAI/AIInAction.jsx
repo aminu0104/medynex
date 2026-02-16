@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Sparkles, ShieldCheck, TrendingUp } from "lucide-react";
+import  hero from "../../assets/Ai/Air-4.png";
 
 const AIInAction = () => {
   return (
@@ -89,9 +90,9 @@ const AIInAction = () => {
           className="flex justify-center"
         >
           <img
-            src=""
+            src={hero}
             alt="AI Dashboard Preview"
-            className="w-full max-w-2xl rounded-2xl shadow-2xl"
+            className="w-full max-w-2xl rounded-2xl"
           />
         </motion.div>
 
