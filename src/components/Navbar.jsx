@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { NavLink, Link } from "react-router-dom";
+import About from "../assets/logo-5.png";
 
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -26,8 +27,8 @@ const Navbar = () => {
 
           {/* LOGO */}
           <Link to="/" className="flex items-center gap-3">
-            <div className="w-9 h-9 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold">
-              M
+            <div className="w-20 h-11 rounded-lg flex items-center justify-center text-white font-bold">
+              <img src={About} alt="Medynex Logo" />
             </div>
             <span className="font-bold text-xl text-gray-800">
               Medynex

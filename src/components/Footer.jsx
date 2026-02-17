@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Facebook, Instagram, Linkedin, X } from "lucide-react";
+import About from "../assets/logo-5.png";
+
 
 const Footer = () => {
   return (
@@ -17,9 +19,9 @@ const Footer = () => {
           {/* Company Info */}
           <div>
             {/* Logo Icon */}
-            <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold text-lg mb-3">
-              M
-            </div>
+            <div className="w-20 h-11 rounded-lg flex items-center justify-center text-white font-bold">
+                         <img src={About} alt="Medynex Logo" />
+                       </div>
 
             {/* Logo Text */}
             <span className="text-xl font-bold text-slate-800 block mb-4">
@@ -31,10 +33,12 @@ const Footer = () => {
             </p>
 
             <p className="text-sm mb-2">
-              <span className="font-semibold">Phone:</span> +234 90642 40961
+              <span className="font-semibold">Phone:</span> +234 7086591021
+
+
             </p>
             <p className="text-sm mb-4">
-              <span className="font-semibold">Email:</span> hello@mylikita.com
+              <span className="font-semibold">Email:</span> hello@medynex.com
             </p>
 
             <div className="flex gap-3">
@@ -58,7 +62,7 @@ const Footer = () => {
             <ul className="space-y-2 text-sm">
               <li><Link to="/" className="hover:text-blue-600">Home</Link></li>
               <li><Link to="/about" className="hover:text-blue-600">About Us</Link></li>
-              <li><Link to="/features" className="hover:text-blue-600">Features</Link></li>
+              <li><Link to="/book-demo" className="hover:text-blue-600">Book Demo</Link></li>
               <li><Link to="/contact" className="hover:text-blue-600">Contact</Link></li>
             </ul>
           </div>
@@ -102,7 +106,7 @@ const Footer = () => {
 
         {/* Bottom */}
         <div className="border-t pt-6 text-center text-sm text-slate-500">
-          © {new Date().getFullYear()} MyLikita Health Solutions Limited. All Rights Reserved.
+          © {new Date().getFullYear()} All rights reserved. Develop by Aminu Abdullahi
         </div>
       </motion.div>
     </footer>
